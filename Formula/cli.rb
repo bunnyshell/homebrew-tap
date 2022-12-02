@@ -5,20 +5,20 @@
 class Cli < Formula
   desc "Bunnyshell's command line tool to create and manage on-demand environments."
   homepage "https://documentation.bunnyshell.com"
-  version "0.8.4"
+  version "0.8.5"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/bunnyshellosi/cli/releases/download/v0.8.4/bunnyshell-cli_0.8.4_Darwin_x86_64.tar.gz"
-      sha256 "986e5fb09d081f3553206738d5bf917d60f6930b1e50c2e9d6fd8d8ab7520b1b"
+    if Hardware::CPU.arm?
+      url "https://github.com/bunnyshellosi/cli/releases/download/v0.8.5/bunnyshell-cli_0.8.5_Darwin_arm64.tar.gz"
+      sha256 "2c23e940e2f070ffa9713f977764cb6fe7c89d0f9ba6f336ffd0bbd85b8d155a"
 
       def install
         bin.install "bunnyshell-cli"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/bunnyshellosi/cli/releases/download/v0.8.4/bunnyshell-cli_0.8.4_Darwin_arm64.tar.gz"
-      sha256 "9078b6ffcf081bf7c9553f949962825fef9f6f508ae6a57cac010f684b293dfc"
+    if Hardware::CPU.intel?
+      url "https://github.com/bunnyshellosi/cli/releases/download/v0.8.5/bunnyshell-cli_0.8.5_Darwin_x86_64.tar.gz"
+      sha256 "40aa3892bfcc5023005ce91a9f6ca77e691080bce6bcb9e4e8c43e339d64bc19"
 
       def install
         bin.install "bunnyshell-cli"
@@ -27,17 +27,17 @@ class Cli < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/bunnyshellosi/cli/releases/download/v0.8.4/bunnyshell-cli_0.8.4_Linux_x86_64.tar.gz"
-      sha256 "a5181de957d4f6b93f3d0a89641a5b9acbeef196857e0bbb533e59199f6628a0"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/bunnyshellosi/cli/releases/download/v0.8.5/bunnyshell-cli_0.8.5_Linux_arm64.tar.gz"
+      sha256 "8a7de651fab8599eaac0c249a3c43f1bdc94d1d1df938bb48335a4d536ce2797"
 
       def install
         bin.install "bunnyshell-cli"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/bunnyshellosi/cli/releases/download/v0.8.4/bunnyshell-cli_0.8.4_Linux_arm64.tar.gz"
-      sha256 "4ff3dbd0a64ae7cb46b01f86d1bbe159451eb93a70cd5b9308edddd86fd04f17"
+    if Hardware::CPU.intel?
+      url "https://github.com/bunnyshellosi/cli/releases/download/v0.8.5/bunnyshell-cli_0.8.5_Linux_x86_64.tar.gz"
+      sha256 "9ce71d0ebe472117888bd55f21b5bec3763a78accea604d1c5f80bcf6a89b5a4"
 
       def install
         bin.install "bunnyshell-cli"
