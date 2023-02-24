@@ -2,7 +2,7 @@
 
 ## How do I install these formulae?
 
-`brew install bunnyshellosi/tap/cli`
+`brew install bunnyshell/tap/cli`
 
 ## Documentation
 
