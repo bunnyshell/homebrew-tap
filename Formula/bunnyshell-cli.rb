@@ -5,20 +5,20 @@
 class BunnyshellCli < Formula
   desc "Bunnyshell's command line tool to create and manage on-demand environments."
   homepage "https://documentation.bunnyshell.com"
-  version "0.18.3"
+  version "0.18.4"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/bunnyshell/cli/releases/download/v0.18.3/bns_0.18.3_Darwin_x86_64.tar.gz"
-      sha256 "6caeec599d58b02f5634a22d580177790d7319698ed0e3569878e877d886bf45"
+    if Hardware::CPU.arm?
+      url "https://github.com/bunnyshell/cli/releases/download/v0.18.4/bns_0.18.4_Darwin_arm64.tar.gz"
+      sha256 "be0bbec0d5eabd06e2e18da373c3599e5d7c83c6d89caed08168986d88460326"
 
       def install
         bin.install "bns"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/bunnyshell/cli/releases/download/v0.18.3/bns_0.18.3_Darwin_arm64.tar.gz"
-      sha256 "6aa998852b7b8a6e38261180304fd4e051827dbc21d56f0537b8438b1bd361da"
+    if Hardware::CPU.intel?
+      url "https://github.com/bunnyshell/cli/releases/download/v0.18.4/bns_0.18.4_Darwin_x86_64.tar.gz"
+      sha256 "a3c8158a930c1460261ec5dc91d8e8018f76a0062bc66661f183dab1b159bbf7"
 
       def install
         bin.install "bns"
@@ -27,17 +27,17 @@ class BunnyshellCli < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/bunnyshell/cli/releases/download/v0.18.3/bns_0.18.3_Linux_x86_64.tar.gz"
-      sha256 "036d2ac152ecc5ad63f91a46900794d284d076979e052d9ca85a6a4830170c5a"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/bunnyshell/cli/releases/download/v0.18.4/bns_0.18.4_Linux_arm64.tar.gz"
+      sha256 "f480a991556a46231c08baa7b83fb2503cfecc22ca8d0a79f881f309363ac966"
 
       def install
         bin.install "bns"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/bunnyshell/cli/releases/download/v0.18.3/bns_0.18.3_Linux_arm64.tar.gz"
-      sha256 "ace5c29adc287da8a5d98df8aa4867da1f57a3c94ae5456bb7c754effbb4d820"
+    if Hardware::CPU.intel?
+      url "https://github.com/bunnyshell/cli/releases/download/v0.18.4/bns_0.18.4_Linux_x86_64.tar.gz"
+      sha256 "3040dab218bca32139acc380ba5086b32fc97604328f496f09fa743c4d60124b"
 
       def install
         bin.install "bns"
