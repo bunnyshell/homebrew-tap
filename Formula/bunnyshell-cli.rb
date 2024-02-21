@@ -5,20 +5,20 @@
 class BunnyshellCli < Formula
   desc "Bunnyshell's command line tool to create and manage on-demand environments."
   homepage "https://documentation.bunnyshell.com"
-  version "0.18.4"
+  version "0.18.5"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/bunnyshell/cli/releases/download/v0.18.4/bns_0.18.4_Darwin_arm64.tar.gz"
-      sha256 "be0bbec0d5eabd06e2e18da373c3599e5d7c83c6d89caed08168986d88460326"
+      url "https://github.com/bunnyshell/cli/releases/download/v0.18.5/bns_0.18.5_Darwin_arm64.tar.gz"
+      sha256 "febac289e43064e176646f6a0adf29b82b530dc966dcbeb8433f8af8b7daf4fd"
 
       def install
         bin.install "bns"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/bunnyshell/cli/releases/download/v0.18.4/bns_0.18.4_Darwin_x86_64.tar.gz"
-      sha256 "a3c8158a930c1460261ec5dc91d8e8018f76a0062bc66661f183dab1b159bbf7"
+      url "https://github.com/bunnyshell/cli/releases/download/v0.18.5/bns_0.18.5_Darwin_x86_64.tar.gz"
+      sha256 "1ea63a067ecf30ecb0fdcd55b50a289433ec84af7a292c055caf6f58a8f016c0"
 
       def install
         bin.install "bns"
@@ -28,16 +28,16 @@ class BunnyshellCli < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/bunnyshell/cli/releases/download/v0.18.4/bns_0.18.4_Linux_arm64.tar.gz"
-      sha256 "f480a991556a46231c08baa7b83fb2503cfecc22ca8d0a79f881f309363ac966"
+      url "https://github.com/bunnyshell/cli/releases/download/v0.18.5/bns_0.18.5_Linux_arm64.tar.gz"
+      sha256 "1038a914863839b91c68f6881552064d38fb9e2f13f4d2f7f7d5faaceafdcbdd"
 
       def install
         bin.install "bns"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/bunnyshell/cli/releases/download/v0.18.4/bns_0.18.4_Linux_x86_64.tar.gz"
-      sha256 "3040dab218bca32139acc380ba5086b32fc97604328f496f09fa743c4d60124b"
+      url "https://github.com/bunnyshell/cli/releases/download/v0.18.5/bns_0.18.5_Linux_x86_64.tar.gz"
+      sha256 "f47b053ab351dfab93a1ff3e686e625474d3bcd9bc4ffd32e507872fbb446806"
 
       def install
         bin.install "bns"
