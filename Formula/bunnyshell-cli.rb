@@ -5,20 +5,20 @@
 class BunnyshellCli < Formula
   desc "Bunnyshell's command line tool to create and manage on-demand environments."
   homepage "https://documentation.bunnyshell.com"
-  version "0.23.0"
+  version "0.24.0"
 
   on_macos do
     on_intel do
-      url "https://github.com/bunnyshell/cli/releases/download/v0.23.0/bns_0.23.0_Darwin_x86_64.tar.gz"
-      sha256 "d030a93a36aa5925af41cdbd5d1d7525d642b4c5ca02dbed583551b2eb9fc8db"
+      url "https://github.com/bunnyshell/cli/releases/download/v0.24.0/bns_0.24.0_Darwin_x86_64.tar.gz"
+      sha256 "c0af54e61091422af8b8d014e45759f17798eeaa83e146cf24d6586a68d888a9"
 
       def install
         bin.install "bns"
       end
     end
     on_arm do
-      url "https://github.com/bunnyshell/cli/releases/download/v0.23.0/bns_0.23.0_Darwin_arm64.tar.gz"
-      sha256 "c31b05e7850516b3dea373daae3490070275a19fdc886dee4f3035558e641325"
+      url "https://github.com/bunnyshell/cli/releases/download/v0.24.0/bns_0.24.0_Darwin_arm64.tar.gz"
+      sha256 "55ec31a2f28a16dc64b42623c3edbddee41131df307d8dfece5222beb2b427f3"
 
       def install
         bin.install "bns"
@@ -29,8 +29,8 @@ class BunnyshellCli < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/bunnyshell/cli/releases/download/v0.23.0/bns_0.23.0_Linux_x86_64.tar.gz"
-        sha256 "268b08f9e6e193584dc9f1eb7986e541d8ad60a34838079090ee0329c199e871"
+        url "https://github.com/bunnyshell/cli/releases/download/v0.24.0/bns_0.24.0_Linux_x86_64.tar.gz"
+        sha256 "c1eb85570e61ddbcbb4d8e7dedb88e3238945d1ac90694ab3646c238a7b56f5d"
 
         def install
           bin.install "bns"
@@ -39,8 +39,8 @@ class BunnyshellCli < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/bunnyshell/cli/releases/download/v0.23.0/bns_0.23.0_Linux_arm64.tar.gz"
-        sha256 "05e7e1f71d7705024a1373a7f33931ede739c30d5a7c863eaab89f022bf795b8"
+        url "https://github.com/bunnyshell/cli/releases/download/v0.24.0/bns_0.24.0_Linux_arm64.tar.gz"
+        sha256 "3a0d6a094c8490fc09353ede1a4c70a8dd61466b7ae1190329bcbb2f77a2c46d"
 
         def install
           bin.install "bns"
